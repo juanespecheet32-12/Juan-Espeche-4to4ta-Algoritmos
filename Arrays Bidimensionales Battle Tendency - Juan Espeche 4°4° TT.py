@@ -88,3 +88,4 @@ def menu():
             ejercicio3()
         elif opc == 4:
             ejercicio4()
+menu()
