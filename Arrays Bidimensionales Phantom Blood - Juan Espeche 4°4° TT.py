@@ -35,27 +35,17 @@ def ejercicio3():
         except (ValueError, IndexError):
             print("ERROR ERROR. Haz ingresado algo mal. ERROR ERROR")
 def ejercicio4():
-    promedio = 0
-    matriz4x4 = [[0, 2, 6, 7],
+    matriz = [[0, 2, 6, 7],
               [3, 9, 1, 4],
               [9, 5, 0, 6,],
               [2, 7, 8, 80]]
-    matriz4x4_auxiliar = []
-    for fila in matriz4x4:
-        print(fila)
-        for elemento in fila:
-            promedio += elemento
-    promedio = promedio/16
-    for fila in matriz4x4:
-        lista_auxiliar = []
-        for elemento in fila:
-            if elemento < promedio:
-                lista_auxiliar.append(promedio)
-            else:
-                lista_auxiliar.append(elemento)
-        matriz4x4_auxiliar.append((lista_auxiliar))
-    for x in matriz4x4_auxiliar:
-        print(x)
+    numero_mas_grande = 0
+   for fila in matriz:
+       print(fila)
+       for numero in fila:
+           if numero > numero_mas_grande:
+               numero_mas_grande = numero
+   print(f"El Número Más grande es {numero_mas_grande}")
 
 def menu():
     quiere_seguir = True
@@ -82,3 +72,4 @@ def menu():
             ejercicio4()
 
 menu()
+
