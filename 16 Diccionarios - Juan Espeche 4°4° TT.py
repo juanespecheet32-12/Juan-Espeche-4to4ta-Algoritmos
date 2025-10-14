@@ -27,11 +27,8 @@ def ejercicio4():
 
 def ejercicio5():
     try:
-        mundo = [{"paises": "argentina"}, {"paises": "mexico"}, {"paises": "estados unidos"},
-                 {"paises": "brasil"}, {"paises": ""}
-                 {"paises": "colombia"},
-                 {"paises": "paraguay"},
-                 {"paises": "bolivia"},
-                 {"paises": "ecuador"}
+        mundo = [{"argentina": "buenos aires"}, {"mexico": "ciudad de mexico"}, {"estados unidos": "washington"}, {"colombia": "bogota"},
+                 {"paraguay": "asunción"}, {"ecuador": "quito"}, {"bolivia": "sucre"}, {"brasil": "brasilia"}
                  ]
-ejercicio4()
+
+ejercicio5()
