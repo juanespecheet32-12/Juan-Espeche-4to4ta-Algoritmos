@@ -1,0 +1,28 @@
+def parcial():
+    temperaturas = [21, 23, 26, 22, 29, 30, 33, 32, 31, 30, 29, 27, 32, 36, 35,
+                    30, 31, 27, 23, 20, 18, 17, 19, 28, 34, 31, 38, 39, 35, 33]
+    temp_max = 0
+    temp_min = 40
+    temp_aux = 0
+    promedio = 30
+    temp_anunciada = 0
+    for x in range(len(temperaturas)-1):
+        temp = temperaturas[x]
+        if temp > temp_max:
+            temp_max = temp
+    for h in range(len(temperaturas)-1):
+        temp = temperaturas[h]
+        if temp < temp_min:
+            temp_min = temp
+    for y in range(len(temperaturas)-1):
+        temp = temperaturas[y]
+        if temp > 25:
+            temp_anunciada += 1
+    for z in range(len(temperaturas)-1):
+        temp_aux += temperaturas[z]
+    temp_aux = temp_aux / promedio
+    print(f"El dia mas caluroso es: {temp_max}")
+    print(f"El dia mas frio es: {temp_min}")
+    print(f"Los dias que superaron los 25°C son: {temp_anunciada} dias")
+    print(f"El promedio de las temperaturas del mes es: {temp_aux}")
+parcial()
