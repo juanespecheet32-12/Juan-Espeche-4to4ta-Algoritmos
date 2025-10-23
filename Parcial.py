@@ -6,20 +6,14 @@ def parcial():
     temp_aux = 0
     promedio = 30
     temp_anunciada = 0
-    for x in range(len(temperaturas)-1):
-        temp = temperaturas[x]
-        if temp > temp_max:
-            temp_max = temp
-    for h in range(len(temperaturas)-1):
-        temp = temperaturas[h]
-        if temp < temp_min:
-            temp_min = temp
-    for y in range(len(temperaturas)-1):
-        temp = temperaturas[y]
-        if temp > 25:
+    for temperatura in temperaturas:
+        if temperatura > temp_max:
+            temp_max = temperatura
+        if temperatura < temp_min:
+            temp_min = temperatura
+        if temperatura > 25:
             temp_anunciada += 1
-    for z in range(len(temperaturas)-1):
-        temp_aux += temperaturas[z]
+        temp_aux += temperatura
     temp_aux = temp_aux / promedio
     print(f"El dia mas caluroso es: {temp_max}")
     print(f"El dia mas frio es: {temp_min}")
