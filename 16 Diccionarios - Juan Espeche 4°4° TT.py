@@ -26,9 +26,26 @@ def ejercicio4():
     print(f"El promedio de las calificaciones del alumno es: {promedio}")
 
 def ejercicio5():
-    try:
-        mundo = [{"argentina": "buenos aires"}, {"mexico": "ciudad de mexico"}, {"estados unidos": "washington"}, {"colombia": "bogota"},
-                 {"paraguay": "asunción"}, {"ecuador": "quito"}, {"bolivia": "sucre"}, {"brasil": "brasilia"}
-                 ]
+    mundo = {"argentina": "buenos aires",
+             "mexico": "ciudad de mexico",
+             "estados unidos": "washington",
+             "colombia": "bogota",
+             "paraguay": "asunción",
+             "ecuador": "quito",
+             "bolivia": "sucre",
+             "brasil": "brasilia"}
+    while True:
+        opc = str(input("Ingrese el nombre de un pais de américa que usted quiera: "))
+        if opc in mundo:
+            print(mundo[opc])
+        else:
+            print("Ha ingresado algo mal. Intente de nuevo.")
 
-ejercicio5()
+def ejercicio6():
+    precios = {"precio_1": 250,
+               "precio_2": 100,
+               "precio_3": 500,
+               "precio_4": 1000,
+               "precio_5": 1500
+               }
+ejercicio6()
