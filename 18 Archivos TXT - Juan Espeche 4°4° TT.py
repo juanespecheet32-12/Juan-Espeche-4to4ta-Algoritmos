@@ -71,11 +71,10 @@ def menu():
         elif opcion == "3":
             buscar_contacto()
         elif opcion == "4":
-            print("saliendo...")
+            print("Saliendo...")
             break
         else:
             print("Opción inválida. Intente de nuevo.\n")
     with open("contactos.txt","w",encoding="utf-8") as archivo:
         for x in range(len(nombres)):
-
             archivo.write(f"{nombres[x]} - {telefonos[x]}\n")
