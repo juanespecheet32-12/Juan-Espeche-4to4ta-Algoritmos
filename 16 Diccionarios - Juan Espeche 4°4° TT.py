@@ -42,10 +42,74 @@ def ejercicio5():
             print("Ha ingresado algo mal. Intente de nuevo.")
 
 def ejercicio6():
-    precios = {"precio_1": 250,
-               "precio_2": 100,
-               "precio_3": 500,
-               "precio_4": 1000,
-               "precio_5": 1500
-               }
-ejercicio6()
+    Carrito = 0
+    Items_Tienda = {
+        "manzana": 3.50,
+        "leche": 1.20,
+        "pan": 2.00,
+        "huevos": 2.50,
+        "arroz": 1.00,
+        "cafe": 4.00,
+        "queso": 5.00,
+        "tomates": 2.30,
+        "pollo": 7.00,
+        "azucar": 1.50
+    }
+    seguimos = True
+    while seguimos:
+            print("""--------------Menú--------------
+                  PRODUCTOS
+                  Manzana: 3.50
+                  Leche: 1.20
+                  Pan: 2.00
+                  Huevos": 2.50
+                  Arroz": 1.00
+                  Cafe": 4.00
+                  Queso": 5.00
+                  Tomates": 2.30
+                  Pollo": 7.00
+                  Azucar": 1.50
+                  --------------------------------""")
+            Producto = str(input("Elige el Producto que quieras llevar(Escriba 'salir' para Salir): ")).lower()
+            if Producto == "salir":
+                break
+            Cantidad = int(input("Elige la cantidad que vas a llevar: "))
+            Carrito += Items_Tienda[Producto] * Cantidad
+            print("Total: ",Carrito)
+
+def ejercicio7():
+    informacion_personal = {
+        "nombre": "Juan", 
+        "edad": 17, 
+        "ciudad": "Villa Urquiza", 
+        "profesion": "Estudiante",
+        "teléfono": 1169421871,
+        "email": "juanespeche11@gmail.com"
+    }
+    del informacion_personal["teléfono"]
+    print(informacion_personal)
+
+def ejercicio8():
+    dic1 = {
+        "perro" : "animal",
+        "gato" : "animal",
+        "uno": 1,
+        "dos": 2
+    }
+    esta = input("Ingrese la clave a buscar: ")
+    if esta in dic1:
+        print(dic1.get(esta), "True")
+    else:
+        print(dic1.get(esta), "False")
+
+def ejercicio9():
+    dic1 = {
+        "uno" : 1,
+        "dos" : 2
+    }
+    dic2 = {
+        "dos" : 2,
+        "tres" : 3
+    }
+    dic1.update(dic2)
+    print(dic1)
